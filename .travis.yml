@@ -1,8 +1,12 @@
 language: node_js
+cache:
+  directories:
+    - cache
 node_js:
   - '0.10'
 script:
   - node ./app.js
+before_deploy: "git fetch --tags"
 deploy:
   provider: releases
   api_key:
