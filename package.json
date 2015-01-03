@@ -1,7 +1,16 @@
 {
   "name": "NodeIRC",
+  "description": "A modern IRC client built with the power of Node.",
   "version": "0.0.1",
+  "author": "Paul Sauve <paul@burngames.net>",
   "main": "./html/index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurnGames/NodeIRC"
+  },
+  "bugs": {
+    "url": "https://github.com/BurnGames/NodeIRC/issues"
+  },
   "window": {
     "width": 700,
     "height": 700,
@@ -12,5 +21,6 @@
   "dependencies": {
     "irc": "^0.3.7",
     "node-webkit-builder": "1.0.4"
-  }
+  },
+  "license": "MIT"
 }
