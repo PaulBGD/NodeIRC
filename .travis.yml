@@ -7,12 +7,11 @@ node_js:
 script:
   - node ./app.js
 before_deploy: "git fetch --tags"
-
 deploy:
   provider: releases
   api_key:
     secure: DVWqYEyrCaaXemodrP943CasKmpNTYMygNCg0ZHn8SxZD0kfuRs4UPaHyp92aoGY+qIJm5zECPzoa/wXFoUcTYzcPA4nPG17agXj8/6ET8Hr51c5g0kmwIxh8HrQeoIs1nFEBWjot0q+lEf4hoo4H+qs6z6Hg+V0p/0ROB2qhW4=
-  file: build/**/**/**
+  file: build
   on:
     tags: true
     all_branches: true
