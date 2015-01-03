@@ -1,6 +1,4 @@
 language: node_js
 node_js:
   - "0.10"
-install:
-  - "npm install -g node-webkit-builder"
-script: "node-webkit-builder -p win32,win64,osx32,osx64,linux32,linux64 -o ./builds ./"
+script: "node ./app.js"

@@ -10,6 +10,7 @@
     "resizable": true
   },
   "dependencies": {
-    "irc": "^0.3.7"
+    "irc": "^0.3.7",
+    "node-webkit-builder": "1.0.4"
   }
 }
