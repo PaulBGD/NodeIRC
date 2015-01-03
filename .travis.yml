@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "0.10"
+install:
+  - "npm install -g node-webkit-builder"
+script: "nwbuild -p win32,win64,osx32,osx64,linux32,linux64 -o ./builds ./"
