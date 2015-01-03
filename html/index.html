@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Text Editor</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #222;
+        }
+
+        h1, h2, h3, h4, h5 {
+            margin-top: 0;
+        }
+
+        #loginDetails {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        #networkList {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 100%;
+            margin-bottom: 0;
+        }
+
+        #networkList .badge a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .alert {
+            margin-bottom: 0 !important;;
+        }
+
+        #content > .message {
+            width: 100%;
+            padding: 5px 10px;
+            color: white;
+        }
+
+        #content > .message:nth-child(even) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        #content > .message > .from {
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        #content > .message > .from.op {
+            color: #e67e22;
+        }
+
+        #content > .message > .from.directed {
+            background: #ecf0f1;
+        }
+
+        .modal-dialog {
+            z-index: 999999;
+        }
+
+        .loginAlert {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="connector">
+    <div id="loginDetails">
+        <div class="loginAlert alert alert-warning">Missing Login Details</div>
+        <input id="nick" type="text" placeholder="Nickname" class="form-control">
+        <input id="user" type="text" placeholder="Username" class="form-control">
+        <input id="pass" type="password" placeholder="Password" class="form-control">
+        <button type="button" id="connect" class="btn btn-primary btn-block">Connect</button>
+    </div>
+    <ul id="networkList" class="list-group">
+        <li class="list-group-item disabled">
+            Networks <span class="badge"><a href="#" class="create">+</a></span>
+        </li>
+    </ul>
+    <div id="networkModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Details</h3>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">IP</span>
+                        <input type="text" placeholder="IP" class="form-control network-ip">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">Port</span>
+                        <input type="text" placeholder="Port" class="form-control network-port">
+                    </div>
+                    <br>
+
+                    <h3>Channels</h3>
+
+                    <div class="network-channels">
+
+                    </div>
+                    <button class="add btn btn-default btn-block btn-sm" type="button">Add Channel</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger delete">Delete</button>
+                    <button type="button" class="btn btn-primary save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+
+</div>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

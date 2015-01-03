@@ -1,0 +1,15 @@
+{
+  "name": "NodeIRC",
+  "version": "0.0.1",
+  "main": "./html/index.html",
+  "window": {
+    "width": 700,
+    "height": 700,
+    "frame": true,
+	"toolbar": true,
+    "resizable": true
+  },
+  "dependencies": {
+    "irc": "^0.3.7"
+  }
+}
