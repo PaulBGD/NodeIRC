@@ -1,4 +1,4 @@
-NodeIRC
+NodeIRC [![Build Status](https://travis-ci.org/BurnGames/NodeIRC.svg?branch=master)](https://travis-ci.org/BurnGames/NodeIRC)
 ====================
 
 A work in progress (including the name)

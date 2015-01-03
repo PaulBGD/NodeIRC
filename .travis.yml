@@ -3,4 +3,4 @@ node_js:
   - "0.10"
 install:
   - "npm install -g node-webkit-builder"
-script: "/home/travis/.nvm/v0.10.35/lib/node_modules/node-webkit-builder -p win32,win64,osx32,osx64,linux32,linux64 -o ./builds ./"
+script: "node-webkit-builder -p win32,win64,osx32,osx64,linux32,linux64 -o ./builds ./"
